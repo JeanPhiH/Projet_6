@@ -1,6 +1,5 @@
 .menu {
-	// width: 309px;
-	font-size: 24px;
+	font-size: 12px;
 	font-weight: 500;
 
 	ul {
@@ -8,14 +7,18 @@
 		justify-content: flex-end;
 		align-items: center;
 		gap: 57px;
-		list-style: none;
-
+		list-style-type: none;
+		
 		li {
 
 			a {
 				text-decoration: none;
 				color: black;
-				&:hover {
+				// &:hover {
+				// 	text-decoration: underline;
+				// }
+
+				&.activelink {
 					text-decoration: underline;
 				}
 			}

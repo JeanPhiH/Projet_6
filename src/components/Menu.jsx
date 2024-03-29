@@ -7,6 +7,7 @@ export default function Menu() {
         <li>
           <NavLink
             to="/"
+						className={({ isActive }) => (isActive ? "activelink" : undefined)}
           >
             Accueil
           </NavLink>
@@ -14,6 +15,7 @@ export default function Menu() {
 				<li>
 					<NavLink
 						to="/a-propos"
+						className={({ isActive }) => (isActive ? "activelink" : undefined)}
 					>
 						À propos
 					</NavLink>
