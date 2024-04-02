@@ -1,9 +1,12 @@
+import { NavLink } from "react-router-dom";
 
-
-export default function Card () {
+export default function Card ({cover, title, idlog}) {
 	return (
-		<header>
-			<h1>Card</h1>
-		</header>
+		<NavLink to={`/fiche-logement/${idlog}`}>
+			<figure className="card">
+				<img src={cover} alt={title} />
+				<figcaption>{title}</figcaption>
+			</figure>
+		</NavLink>
 	);
 }
