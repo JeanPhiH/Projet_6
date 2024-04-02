@@ -1,3 +1,9 @@
-img {
+.logo img {
 	width: 145px;
+}
+
+@media (min-width: $breakpoint-mobile) {
+	.logo img {
+		width: 210px;
+	}
 }

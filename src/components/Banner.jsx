@@ -2,8 +2,8 @@
 
 export default function Banner () {
 	return (
-		<header>
-			<h1>Banner</h1>
-		</header>
+		<div className="banner">
+			<p>Chez vous, partout et ailleurs</p>
+		</div>
 	);
 }

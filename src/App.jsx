@@ -4,7 +4,7 @@ import FicheLogement from "./pages/FicheLogement";
 import APropos from "./pages/APropos";
 import Error404 from "./pages/Error404";
 
-function App() {
+export default function App() {
   return (
     <>
 			<Routes>
@@ -16,5 +16,3 @@ function App() {
 		</>
   );
 }
-
-export default App;

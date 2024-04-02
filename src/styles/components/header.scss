@@ -1,7 +1,13 @@
 .header {
-	max-width: 1240px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 0 auto;
+	margin: 20px auto 0 auto;
+}
+
+@media (min-width: $breakpoint-mobile) {
+	.header {
+		max-width: 1240px;
+		margin-top: 45px;
+	}
 }

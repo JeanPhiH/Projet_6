@@ -1,0 +1,20 @@
+$color-primary: #FF6060;
+$breakpoint-mobile: 650px;
+$banner-url-mobile: "/src/assets/image_source_1_512.webp";
+$banner-url-desktop: "/src/assets/image_source_1_1240.webp";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	width: 90%;
+	margin: 0 auto;
+}
+
+@media (min-width: $breakpoint-mobile) {
+
+}

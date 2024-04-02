@@ -1,0 +1,36 @@
+.banner {
+	border-radius: 10px;
+	height: 111px;
+	overflow: hidden;
+	background-image: url($banner-url-mobile);
+	background-size: 150%;
+	background-position: center;
+	margin: 27px auto 22px auto;
+	
+	p {
+		background-color: rgba(0, 0, 0, 0.6);
+		display: flex;
+		align-items: center;
+		font-size: 24px;
+		font-weight: bold;
+		color: white;
+		padding: 0 90px 0 16px;
+		height: 100%;
+	}
+}
+
+@media (min-width: $breakpoint-mobile) {
+	.banner {
+		max-width: 1240px;
+		height: 223px;
+		background-image: url($banner-url-desktop);
+		margin-top: 50px;
+		margin-bottom: 43px;
+		p {
+			justify-content: center;
+			font-size: 48px;
+			padding: 0 16px;
+		}
+	}
+
+}

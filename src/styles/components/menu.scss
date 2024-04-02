@@ -1,12 +1,13 @@
 .menu {
 	font-size: 12px;
 	font-weight: 500;
+	text-transform: uppercase;
 
 	ul {
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
-		gap: 57px;
+		gap: 26px;
 		list-style-type: none;
 		
 		li {
@@ -24,5 +25,16 @@
 			}
 		}
 
+	}
+}
+
+@media (min-width: $breakpoint-mobile) {
+	.menu {
+		font-size: 24px;
+		text-transform: none;
+
+		ul {
+			gap: 57px;
+		}
 	}
 }
