@@ -1,17 +1,18 @@
-import Header from "../components/Header";
 import Banner from "../components/Banner";
 import Gallery from "../components/Gallery";
-import Footer from "../components/Footer";
+import PropTypes from 'prop-types';
 
-export default function Home () {
+export default function Home ({listLogements}) {
 	return (
-		<>
-			<Header />
-			<main>
-				<Banner />
-				<Gallery />
-			</main>
-			<Footer />
-		</>
+		
+		<main>
+			<Banner />
+			<Gallery listLogements={listLogements}/>
+		</main>
+		
 	);
+}
+
+Home.propTypes = {
+	listLogements: PropTypes.array
 }

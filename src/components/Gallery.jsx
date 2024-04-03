@@ -1,15 +1,8 @@
-import { useState, useEffect } from "react";
 import Card from "./Card";
+import PropTypes from 'prop-types';
 
-export default function Gallery () {
-	const [listLogements, setListLogements] = useState([])
-	useEffect(() => {
-		fetch("/src/json/logements.json")
-		.then((response) => response.json())
-		.then((jsonData) => {
-			setListLogements(jsonData);
-		})
-	}, []);
+export default function Gallery ({listLogements}) {
+	
 	return (
 		<div className="gallery">
 			{listLogements.map((logement) => (
@@ -17,4 +10,8 @@ export default function Gallery () {
 			))}
 		</div>
 	);
+}
+
+Gallery.propTypes = {
+	listLogements: PropTypes.array
 }

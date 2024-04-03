@@ -1,0 +1,35 @@
+.slide-hidden {
+	display: none;
+}
+
+.carousel {
+	position: relative;
+	height: 255px;
+	border-radius: 10px;
+	overflow: hidden;
+
+	
+	img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+.prev, .next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 30px;
+	color: red;
+	cursor: pointer;
+	z-index: 1;
+}
+
+.prev {
+	left: 10px;
+}
+
+.next {
+	right: 10px;
+}
