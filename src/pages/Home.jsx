@@ -7,8 +7,10 @@ export default function Home () {
 	return (
 		<>
 			<Header />
-			<Banner />
-			<Gallery />
+			<main>
+				<Banner />
+				<Gallery />
+			</main>
 			<Footer />
 		</>
 	);
