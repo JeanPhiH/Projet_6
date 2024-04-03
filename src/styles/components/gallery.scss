@@ -1,10 +1,19 @@
 .gallery {
 	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 }
 
 
 @media (min-width: $breakpoint-mobile) {
 	.gallery {
 		max-width: 1240px;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 50px;
+		background-color: #f6f6f6;
+		border-radius: 25px;
+		padding: 56px 50px;
 	}
 }

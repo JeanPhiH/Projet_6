@@ -1,21 +1,22 @@
 .card-container {
-	
+	height: 255px;
+	width: 100%;
+	border-radius: 10px;
+	margin: 0 auto;
+	overflow: hidden;
 	
 	.card {
-		margin-top: 20px;
 		position: relative;
-		height: 255px;
-		display: flex;
-		flex-direction: column;
+		height: 100%;
+		width: 100%;
 		
 		img {
 			height: 100%;
+			width: 100%;
 			object-fit: cover;
-			border-radius: 10px;
 		}
 		
 		figcaption {
-			border-radius: 10px;
 			position: absolute;
 			display: flex;
 			align-items: flex-end;
@@ -34,8 +35,7 @@
 }
 
 @media (min-width: $breakpoint-mobile) {
-	.card {
-		flex-direction: row;
+	.card-container {
 		width: 340px;
 		height: 340px;
 
