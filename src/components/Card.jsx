@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Card ({cover, title, idlog}) {
 	return (
-		<NavLink to={`/fiche-logement/${idlog}`}>
+		<NavLink className="card-container" to={`/fiche-logement/${idlog}`}>
 			<figure className="card">
 				<img src={cover} alt={title} />
 				<figcaption>{title}</figcaption>

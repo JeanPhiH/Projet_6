@@ -1,0 +1,10 @@
+.gallery {
+	margin: 0 auto;
+}
+
+
+@media (min-width: $breakpoint-mobile) {
+	.gallery {
+		max-width: 1240px;
+	}
+}
