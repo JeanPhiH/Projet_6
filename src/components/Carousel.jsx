@@ -18,7 +18,7 @@ export default function Carousel({idLog, titleId, picturesId}) {
 			<span className="next" onClick={nextSlide}><img src="/src/assets/arrow-right.png" /></span>
 			<span className="counter">{slide + 1}/{picturesId.length}</span>
 			{picturesId.map((picture, index) => (
-				<img className={slide === index ? undefined : "slide-hidden"} key={index} src={picture} alt={titleId} />
+				<img className={slide === index ? undefined : "slide-hidden"} key={`${idLog}-${index}`} src={picture} alt={titleId} />
 				))}
 				
 		</div>

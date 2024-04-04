@@ -28,12 +28,13 @@
 			.tag {
 				@include flex-center;
 				height: 100%;
-				width: 84px;
 				font-size: 10px;
 				font-weight: bold;
 				background-color: $color-primary;
 				color: white;
 				border-radius: 5px;
+				padding: 0 10px;
+				min-width: 84px;
 			}
 		}
 	}
@@ -66,6 +67,7 @@
 	}
 }
 
+
 @media (min-width: $breakpoint-mobile) {
 	.details-container {
 		flex-direction: row;
@@ -89,8 +91,8 @@
 				gap: 10px;
 
 				.tag {
-					width: 115px;
 					font-size: 14px;
+					min-width: 115px;
 				}
 			}
 		}

@@ -1,4 +1,5 @@
 $color-primary: #FF6060;
+$color-secondary: #e3e3e3;
 $breakpoint-mobile: 650px;
 $banner-url-mobile: "/src/assets/image_source_1_512.webp";
 $banner-url-desktop: "/src/assets/image_source_1_1240.webp";
@@ -7,6 +8,21 @@ $banner-url-desktop: "/src/assets/image_source_1_1240.webp";
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+@mixin arrow-right {
+	clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 67% 100%, 92% 50%, 67% 0);
+	background-color: white;
+}
+
+@mixin star-filled {
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+	background-color: $color-primary;
+}
+
+@mixin star-empty {
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+	background-color: $color-secondary;
 }
 
 * {
@@ -23,6 +39,7 @@ body {
 
 header, main {
 	width: 90%;
+	max-width: 1240px;
 	margin: 0 auto;
 }
 

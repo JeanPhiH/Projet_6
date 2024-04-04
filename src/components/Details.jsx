@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import Rating from "./Rating";
 
 export default function Details({titleId, locationId, descriptionId, hostId, ratingId, equipmentsId, tagsId}) {
 	return (
@@ -18,7 +19,7 @@ export default function Details({titleId, locationId, descriptionId, hostId, rat
 						<p className="host-name">{hostId.name}</p>
 						<img className="host-picture"src={hostId.picture} alt={hostId.name} />
 					</div>
-					<p className="rating">{ratingId}</p>
+					<Rating ratingId={ratingId} />
 				</div>
 			</div>
 			<div className="details-collapse">

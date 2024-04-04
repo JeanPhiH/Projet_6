@@ -1,0 +1,31 @@
+.rating {
+	display: flex;
+	width: 100px;
+	justify-content: space-between;
+}
+
+.star-filled {
+	@include star-filled;
+	width: 17px;
+	height: 17px;
+}
+
+.star-empty {
+	@include star-empty;
+	width: 17px;
+	height: 17px;
+}
+
+@media (min-width: $breakpoint-mobile) {
+	.rating {
+		width: 196px;
+	}
+	.star-filled {
+		width: 32px;
+		height: 32px;
+	}
+	.star-empty {
+		width: 32px;
+		height: 32px;
+	}
+}
