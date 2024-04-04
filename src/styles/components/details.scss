@@ -1,6 +1,7 @@
 .details-container {
 	display: flex;
 	flex-direction: column;
+	margin-top: 15px;
 
 	.details-title {
 		display: flex;
@@ -9,7 +10,6 @@
 		.title {
 			color: $color-primary;
 			font-size: 18px;
-			margin-top: 15px;
 		}
 
 		.location {
@@ -23,13 +23,14 @@
 			align-items: center;
 			gap: 10px;
 			margin-top: 10px;
+			height: 18px;
 
 			.tag {
+				@include flex-center;
+				height: 100%;
 				width: 84px;
-				height: 18px;
 				font-size: 10px;
 				font-weight: bold;
-				@include flex-center;
 				background-color: $color-primary;
 				color: white;
 				border-radius: 5px;
@@ -60,6 +61,56 @@
 				width: 32px;
 				height: 32px;
 				border-radius: 50%;
+			}
+		}
+	}
+}
+
+@media (min-width: $breakpoint-mobile) {
+	.details-container {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 30px;
+
+		.details-title {
+
+			.title {
+				font-size: 36px;
+			}
+
+			.location {
+				font-size: 18px;
+			}
+
+			.tags {
+				margin-top: 18px;
+				height: 26px;
+				gap: 10px;
+
+				.tag {
+					width: 115px;
+					font-size: 14px;
+				}
+			}
+		}
+
+		.details-host {
+			flex-direction: column;
+			margin-top: 0;
+			align-items: flex-end;
+			gap: 20px;
+
+			.host {
+
+				.host-name {
+					font-size: 18px;
+				}
+
+				.host-picture {
+					width: 64px;
+					height: 64px;
+				}
 			}
 		}
 	}

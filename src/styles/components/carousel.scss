@@ -20,8 +20,7 @@
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	width: 24px;
-	height: 24px;
+	height: 20px;
 	cursor: pointer;
 }
 
@@ -35,4 +34,35 @@
 
 .next {
 	right: 10px;
+}
+
+.counter {
+	display: none;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 25px;
+	font-size: 18px;
+	color: white;
+}
+
+@media (min-width: $breakpoint-mobile) {
+	.carousel {
+		height: 415px;
+		border-radius: 25px;
+	}
+
+	.prev, .next {
+		height: 80px;
+	}
+	.prev {
+		left: 23px;
+	}
+	.next {
+		right: 23px;
+	}
+
+	.counter {
+		display: block;
+	}
 }
