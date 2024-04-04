@@ -20,14 +20,17 @@
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	font-size: 30px;
-	color: red;
+	width: 24px;
+	height: 24px;
 	cursor: pointer;
-	z-index: 1;
 }
 
 .prev {
 	left: 10px;
+
+	img {
+		transform: rotate(180deg);
+	}
 }
 
 .next {

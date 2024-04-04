@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState } from "react";
 
-export default function Carousel({idLog, titleId,picturesId}) {
+export default function Carousel({idLog, titleId, picturesId}) {
 	const [slide, setSlide] = useState(0);
 
   const nextSlide = () => {
@@ -14,11 +14,12 @@ export default function Carousel({idLog, titleId,picturesId}) {
 
 	return (
 		<div className="carousel">
-			<span className="prev" onClick={prevSlide}>{"<"}</span>
-			<span className="next" onClick={nextSlide}>{">"}</span>
+			<span className="prev" onClick={prevSlide}><img src="/src/assets/arrow-right.png" /></span>
+			<span className="next" onClick={nextSlide}><img src="/src/assets/arrow-right.png" /></span>
 			{picturesId.map((picture, index) => (
-				<img className={slide === index ? "slide" : "slide slide-hidden"} key={idLog-index} src={picture} alt={titleId} />
+				<img className={slide === index ? undefined : "slide-hidden"} key={index} src={picture} alt={titleId} />
 				))}
+				
 		</div>
 	);
 } 

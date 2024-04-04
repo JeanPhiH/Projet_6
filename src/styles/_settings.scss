@@ -3,14 +3,22 @@ $breakpoint-mobile: 650px;
 $banner-url-mobile: "/src/assets/image_source_1_512.webp";
 $banner-url-desktop: "/src/assets/image_source_1_1240.webp";
 
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+	font-weight: 500;
 }
 
 body {
 	font-family: 'Montserrat', sans-serif;
+	
 }
 
 header, main {

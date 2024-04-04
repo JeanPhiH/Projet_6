@@ -1,0 +1,66 @@
+.details-container {
+	display: flex;
+	flex-direction: column;
+
+	.details-title {
+		display: flex;
+		flex-direction: column;
+
+		.title {
+			color: $color-primary;
+			font-size: 18px;
+			margin-top: 15px;
+		}
+
+		.location {
+			font-size: 14px;
+			margin-top: 5px;
+		}
+
+		.tags {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			gap: 10px;
+			margin-top: 10px;
+
+			.tag {
+				width: 84px;
+				height: 18px;
+				font-size: 10px;
+				font-weight: bold;
+				@include flex-center;
+				background-color: $color-primary;
+				color: white;
+				border-radius: 5px;
+			}
+		}
+	}
+
+	.details-host {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 16px;
+
+		.host {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+			.host-name {
+				font-size: 12px;
+				width: 93px;
+				text-align: right;
+				color: $color-primary;
+			}
+
+			.host-picture {
+				width: 32px;
+				height: 32px;
+				border-radius: 50%;
+			}
+		}
+	}
+}
