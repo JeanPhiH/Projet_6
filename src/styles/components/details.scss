@@ -16,56 +16,65 @@
 			font-size: 14px;
 			margin-top: 5px;
 		}
-
-		.tags {
-			display: flex;
-			justify-content: flex-start;
-			align-items: center;
-			gap: 10px;
-			margin-top: 10px;
-			height: 18px;
-
-			.tag {
-				@include flex-center;
-				height: 100%;
-				font-size: 10px;
-				font-weight: bold;
-				background-color: $color-primary;
-				color: white;
-				border-radius: 5px;
-				padding: 0 10px;
-				min-width: 84px;
-			}
-		}
 	}
+}
 
-	.details-host {
+.tags {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 10px;
+	margin-top: 10px;
+	height: 18px;
+
+	.tag {
+		@include flex-center;
+		height: 100%;
+		font-size: 10px;
+		font-weight: bold;
+		background-color: $color-primary;
+		color: white;
+		border-radius: 5px;
+		padding: 0 10px;
+		min-width: 84px;
+	}
+}
+	
+
+.details-host {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 16px;
+
+	.host {
 		display: flex;
-		flex-direction: row-reverse;
-		justify-content: space-between;
 		align-items: center;
-		margin-top: 16px;
+		gap: 10px;
 
-		.host {
-			display: flex;
-			align-items: center;
-			gap: 10px;
+		.host-name {
+			font-size: 12px;
+			width: 93px;
+			text-align: right;
+			color: $color-primary;
+		}
 
-			.host-name {
-				font-size: 12px;
-				width: 93px;
-				text-align: right;
-				color: $color-primary;
-			}
-
-			.host-picture {
-				width: 32px;
-				height: 32px;
-				border-radius: 50%;
-			}
+		.host-picture {
+			width: 32px;
+			height: 32px;
+			border-radius: 50%;
 		}
 	}
 }
+
+.details-collapse {
+	margin-top: 13px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
 
 
 @media (min-width: $breakpoint-mobile) {
@@ -84,36 +93,43 @@
 			.location {
 				font-size: 18px;
 			}
+		}
+	}
 
-			.tags {
-				margin-top: 18px;
-				height: 26px;
-				gap: 10px;
+	.tags {
+		margin-top: 18px;
+		height: 26px;
+		gap: 10px;
 
-				.tag {
-					font-size: 14px;
-					min-width: 115px;
-				}
+		.tag {
+			font-size: 14px;
+			min-width: 115px;
+		}
+	}
+
+	.details-host {
+		flex-direction: column;
+		margin-top: 0;
+		align-items: flex-end;
+		gap: 20px;
+
+		.host {
+
+			.host-name {
+				font-size: 18px;
+			}
+
+			.host-picture {
+				width: 64px;
+				height: 64px;
 			}
 		}
+	}
 
-		.details-host {
-			flex-direction: column;
-			margin-top: 0;
-			align-items: flex-end;
-			gap: 20px;
-
-			.host {
-
-				.host-name {
-					font-size: 18px;
-				}
-
-				.host-picture {
-					width: 64px;
-					height: 64px;
-				}
-			}
-		}
+	.details-collapse {
+		margin-top: 30px;
+		flex-direction: row;
+		justify-content: space-between;
+		gap: 75px;
 	}
 }

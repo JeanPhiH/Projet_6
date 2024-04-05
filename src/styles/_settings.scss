@@ -43,6 +43,10 @@ header, main {
 	margin: 0 auto;
 }
 
+li {
+	list-style: none;
+}
+
 @media (min-width: $breakpoint-mobile) {
 
 }

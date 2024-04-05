@@ -1,0 +1,38 @@
+.title-collapse {
+	background-color: $color-primary;
+	color: white;
+	font-size: 13px;
+	font-weight: bold;
+	border-radius: 5px;
+	height: 30px;
+	padding-left: 10px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.description-collapse {
+	margin: 13px 20px 20px 20px;
+	font-size: 12px;
+	font-weight: 400;
+
+	li {
+		font-weight: 400;
+	}
+}
+
+@media (min-width: $breakpoint-mobile) {
+	.collapse {
+		width: 100%;
+	}
+
+	.title-collapse {
+		font-size: 24px;
+		height: 52px;
+		border-radius: 10px;
+	}
+
+	.description-collapse {
+		font-size: 18px;
+	}
+}

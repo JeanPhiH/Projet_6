@@ -26,7 +26,7 @@ export default function Details({titleId, locationId, descriptionId, hostId, rat
 			</div>
 			<div className="details-collapse">
 				<Collapse titleCollapse="Description" descriptionCollapse={descriptionId} />
-				<CollapseEq titleCollapse="Equipements" equipementsCollapse={equipmentsId} />
+				<CollapseEq titleCollapse="Équipements" equipementsCollapse={equipmentsId} />
 			</div>
 		</>
 	)
