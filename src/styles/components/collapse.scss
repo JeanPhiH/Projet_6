@@ -2,12 +2,13 @@
 	position: relative;
 
 	.arrow-up {
+		cursor: pointer;
 		position: absolute;
 		height: 16px;
 		top: 5px;
 		right: 15px;
 		transform: rotate(270deg);
-		animation: uparrowtation 0.5s linear;
+		animation: uparrowtation 0.3s ease-out;
 		@keyframes uparrowtation {
 			0% {
 				transform: rotate(90deg);
@@ -21,7 +22,7 @@
 	.arrow-down {
 		@extend .arrow-up;
 		transform: rotate(90deg);
-		animation: downarrowtation 0.5s linear;
+		animation: downarrowtation 0.3s ease-out;
 		@keyframes downarrowtation {
 			0% {
 				transform: rotate(270deg);
@@ -42,13 +43,22 @@
 	padding-left: 10px;
 	display: flex;
 	align-items: center;
-	cursor: pointer;
+	
 }
 
 .description-collapse {
 	margin: 13px 20px 20px 20px;
 	font-size: 12px;
 	font-weight: 400;
+	// animation: reveal 0.5s linear;
+	// @keyframes reveal {
+	// 	0% {
+	// 		height: 0%;
+	// 	}	
+	// 	100% {
+	// 		height: 100%;
+	// 	}
+	// }
 
 	li {
 		font-weight: 400;

@@ -6,13 +6,13 @@ export default function Collapse ({titleCollapse, descriptionCollapse}) {
 	const toggleCollapse = () => setIsOpen(!isOpen);
 	return (
 		<div className="collapse">
-			<h3 className="title-collapse" onClick={toggleCollapse}>{titleCollapse}</h3>
+			<h3 className="title-collapse" >{titleCollapse}</h3>
 			{isOpen ? 
 				<>
-				<img className="arrow-down"src="/src/assets/arrow-right.png" />
+				<img onClick={toggleCollapse} className="arrow-down"src="/src/assets/arrow-right.png" />
 				<p className="description-collapse" >{descriptionCollapse}</p>
 				</>
-			: <img className="arrow-up" src="/src/assets/arrow-right.png" />}
+			: <img onClick={toggleCollapse} className="arrow-up" src="/src/assets/arrow-right.png" />}
 		</div>
 	);
 }
