@@ -8,8 +8,11 @@ export default function Collapse ({titleCollapse, descriptionCollapse}) {
 		<div className="collapse">
 			<h3 className="title-collapse" onClick={toggleCollapse}>{titleCollapse}</h3>
 			{isOpen ? 
+				<>
+				<img className="arrow-down"src="/src/assets/arrow-right.png" />
 				<p className="description-collapse" >{descriptionCollapse}</p>
-			: null}
+				</>
+			: <img className="arrow-up" src="/src/assets/arrow-right.png" />}
 		</div>
 	);
 }

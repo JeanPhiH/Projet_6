@@ -1,3 +1,37 @@
+.collapse {
+	position: relative;
+
+	.arrow-up {
+		position: absolute;
+		height: 16px;
+		top: 5px;
+		right: 15px;
+		transform: rotate(270deg);
+		animation: uparrowtation 0.5s linear;
+		@keyframes uparrowtation {
+			0% {
+				transform: rotate(90deg);
+			}
+			100% {
+				transform: rotate(270deg);
+			}
+		}
+	}
+
+	.arrow-down {
+		@extend .arrow-up;
+		transform: rotate(90deg);
+		animation: downarrowtation 0.5s linear;
+		@keyframes downarrowtation {
+			0% {
+				transform: rotate(270deg);
+			}
+			100% {
+				transform: rotate(90deg);
+			}
+		}
+	}
+}
 .title-collapse {
 	background-color: $color-primary;
 	color: white;
@@ -24,6 +58,12 @@
 @media (min-width: $breakpoint-mobile) {
 	.collapse {
 		width: 100%;
+
+		.arrow-up {
+			height: 24px;
+			top: 13px;
+			right: 20px;
+		}
 	}
 
 	.title-collapse {
