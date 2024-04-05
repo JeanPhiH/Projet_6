@@ -13,8 +13,8 @@ export default function FicheLogement ({listLogements}) {
 				if (logement.id === logId.id) {
 					return (
 						<>
-							<Carousel idLog={logement.id} titleId={logement.title} picturesId={logement.pictures}/>
-							<Details titleId={logement.title} locationId={logement.location} descriptionId={logement.description} hostId={logement.host} ratingId={logement.rating} equipmentsId={logement.equipments} tagsId={logement.tags}/>
+							<Carousel key={logement.title} idLog={logement.id} titleId={logement.title} picturesId={logement.pictures}/>
+							<Details key={logement.location} titleId={logement.title} locationId={logement.location} descriptionId={logement.description} hostId={logement.host} ratingId={logement.rating} equipmentsId={logement.equipments} tagsId={logement.tags}/>
 						</>
 					)
 				}

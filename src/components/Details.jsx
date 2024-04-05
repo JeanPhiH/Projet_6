@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 import Rating from "./Rating";
+import Collapse from "./Collapse";
+import CollapseEq from "./CollapseEq";
 
 export default function Details({titleId, locationId, descriptionId, hostId, ratingId, equipmentsId, tagsId}) {
 	return (
@@ -23,8 +25,8 @@ export default function Details({titleId, locationId, descriptionId, hostId, rat
 				</div>
 			</div>
 			<div className="details-collapse">
-				<p>{descriptionId}</p>
-				<p>{equipmentsId}</p>
+				<Collapse titleCollapse="Description" descriptionCollapse={descriptionId} />
+				<CollapseEq titleCollapse="Equipements" equipementsCollapse={equipmentsId} />
 			</div>
 		</>
 	)
