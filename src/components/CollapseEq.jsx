@@ -10,11 +10,13 @@ export default function CollapseEq ({titleCollapse, equipementsCollapse}) {
 			{isOpen ? 
 				<>
 					<img onClick={toggleCollapse} className="arrow-down"src="/src/assets/arrow-right.png" />
-					<ul className="description-collapse">
-						{equipementsCollapse.map((equipement, index) => (
-						<li key={index}>{equipement}</li>
-						))}
-					</ul>
+					<div className="description-container">
+						<ul className="description-collapse">
+							{equipementsCollapse.map((equipement, index) => (
+							<li key={index}>{equipement}</li>
+							))}
+						</ul>
+					</div>
 				</>
 			: <img onClick={toggleCollapse} className="arrow-up" src="/src/assets/arrow-right.png" />}
 		</div>

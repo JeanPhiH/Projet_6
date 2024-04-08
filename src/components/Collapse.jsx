@@ -10,7 +10,9 @@ export default function Collapse ({titleCollapse, descriptionCollapse}) {
 			{isOpen ? 
 				<>
 				<img onClick={toggleCollapse} className="arrow-down"src="/src/assets/arrow-right.png" />
-				<p className="description-collapse" >{descriptionCollapse}</p>
+				<div className="description-container">
+					<p className="description-collapse" >{descriptionCollapse}</p>
+				</div>
 				</>
 			: <img onClick={toggleCollapse} className="arrow-up" src="/src/assets/arrow-right.png" />}
 		</div>
