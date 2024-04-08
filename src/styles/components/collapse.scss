@@ -47,7 +47,6 @@
 }
 .description-container {
 	overflow: hidden;
-	height: 100%;
 }
 .description-collapse {
 	margin: 13px 20px 20px 20px;
@@ -57,10 +56,10 @@
 	animation: reveal 0.3s linear;
 	@keyframes reveal {
 		0% {
-			bottom: 90%;
+			bottom: 100px;
 		}	
 		100% {
-			bottom: 0%;
+			bottom: 0px;
 		}
 	}
 
