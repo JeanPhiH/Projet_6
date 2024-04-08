@@ -9,7 +9,7 @@ export default function FicheLogement ({listLogements}) {
 	const isLogement = listLogements.find(log => log.id === logId.id);
 	return (
 		<>
-			{!isLogement && <Error404 />}
+			{!isLogement && <Error404 key="error404"/>}
 			{listLogements.map((logement) => {
 				if (logement.id === logId.id) {
 					return (

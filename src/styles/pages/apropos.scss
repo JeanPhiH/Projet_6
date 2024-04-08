@@ -1,0 +1,30 @@
+.banner2 {
+	@extend .banner;
+	background-image: url($banner2-url-mobile);
+	background-size: cover;
+
+	div {
+		background-color: rgba(0, 0, 0, 0.3);
+		height: 100%;
+	}
+}
+
+.apropos {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+
+
+
+
+@media (min-width: $breakpoint-mobile) {
+	.apropos {
+		gap: 30px;
+
+		.banner2 {
+		background-image: url($banner2-url-desktop);
+		}
+	}
+}

@@ -16,7 +16,6 @@ export default function App() {
 			setListLogements(jsonData);
 		})
 	}, []);
-	console.log("App: ", listLogements)
 
   return (
     <>
