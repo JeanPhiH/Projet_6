@@ -5,10 +5,10 @@ import PropTypes from 'prop-types';
 export default function Home ({listLogements}) {
 	return (
 		
-		<main>
+		<>
 			<Banner />
 			<Gallery listLogements={listLogements}/>
-		</main>
+		</>
 		
 	);
 }

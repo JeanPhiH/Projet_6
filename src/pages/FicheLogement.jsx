@@ -2,13 +2,14 @@ import { useParams } from "react-router-dom";
 import Carousel from "../components/Carousel";
 import Details from "../components/Details";
 import PropTypes from 'prop-types';
+import Error404 from "../pages/Error404";
 
 export default function FicheLogement ({listLogements}) {
-	const logId = useParams()
-	console.log("logId: ",logId)
-	console.log("FicheLogement: ",listLogements)
+	const logId = useParams();
+	const isLogement = listLogements.find(log => log.id === logId.id);
 	return (
-		<main>
+		<>
+			{!isLogement && <Error404 />}
 			{listLogements.map((logement) => {
 				if (logement.id === logId.id) {
 					return (
@@ -19,7 +20,7 @@ export default function FicheLogement ({listLogements}) {
 					)
 				}
 			})}
-		</main>
+		</>
 	);
 }
 

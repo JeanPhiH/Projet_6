@@ -21,12 +21,15 @@ export default function App() {
   return (
     <>
 			<Header />
-			<Routes>
-				<Route path="/" element={<Home listLogements={listLogements}/>} />
-				<Route path="/fiche-logement/:id" element={<FicheLogement listLogements={listLogements}/>} />
-				<Route path="/a-propos" element={<APropos />} />
-				<Route path="*" element={<Error404 />} />
-			</Routes>
+			<main>
+				<Routes>
+					<Route path="/" element={<Home listLogements={listLogements}/>} />
+					<Route path="/fiche-logement/:id" element={<FicheLogement listLogements={listLogements}/>} />
+					<Route path="/a-propos" element={<APropos />} />
+					<Route path="*" element={<Error404 />} />
+					<Route path="/error404" element={<Error404 />} />
+				</Routes>
+			</main>
 			<Footer />
 		</>
   );
