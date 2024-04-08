@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 
-export default function Collapse ({titleCollapse, descriptionCollapse}) {
+export default function Collapse ({titleCollapse, descriptionCollapse, equipementsCollapse}) {
 	const [isOpen, setIsOpen] = useState(false);
 	const toggleCollapse = () => setIsOpen(!isOpen);
 	return (
@@ -11,7 +11,7 @@ export default function Collapse ({titleCollapse, descriptionCollapse}) {
 				<>
 					<img onClick={toggleCollapse} className="arrow-down"src="/src/assets/arrow-right.png" />
 					<div className="description-container">
-						<p className="description-collapse" >{descriptionCollapse}</p>
+						<p className="description-collapse" >{descriptionCollapse ? descriptionCollapse : equipementsCollapse}</p>
 					</div>
 				</>
 			: <img onClick={toggleCollapse} className="arrow-up" src="/src/assets/arrow-right.png" />}
@@ -21,5 +21,6 @@ export default function Collapse ({titleCollapse, descriptionCollapse}) {
 
 Collapse.propTypes = {
 	titleCollapse: PropTypes.string,
-	descriptionCollapse: PropTypes.string
+	descriptionCollapse: PropTypes.string,
+	equipementsCollapse: PropTypes.array
 }
