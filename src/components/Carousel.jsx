@@ -25,7 +25,6 @@ export default function Carousel({idLog, titleId, picturesId}) {
 			{picturesId.map((picture, index) => (
 				<img className={slide === index ? undefined : "slide-hidden"} key={`${idLog}-${index}`} src={picture} alt={titleId} />
 				))}
-				
 		</div>
 	);
 } 
