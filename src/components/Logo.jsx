@@ -1,10 +1,7 @@
 
 
-const Logo = () => {
+export default function Logo() {
 	return (
-		<h1 className="logo">
-			<img src="/assets/logo.png" alt="Kasa: location de logements entre particuliers" />
-		</h1>
+		<img src="/assets/logo.png" alt="Kasa: location de logements entre particuliers" />
 	);
 }
-export default Logo

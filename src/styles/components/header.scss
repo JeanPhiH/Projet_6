@@ -5,9 +5,23 @@
 	margin: 20px auto 27px auto;
 }
 
+.logo {
+	height: 46.72px;
+	width: 145px;
+
+	img {
+		@include hw100;
+	}
+}
+
 @media (min-width: $breakpoint-mobile) {
 	.header {
 		max-width: 1240px;
 		margin-top: 45px;
+	}
+
+	.logo {
+		height: 68px;
+		width: 210px;
 	}
 }

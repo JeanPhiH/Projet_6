@@ -15,8 +15,10 @@
 	}
 }
 
-.logo-footer img {
+.logo-footer img{
 	width: 122px;
+	filter: brightness(0) invert(100%);
+	-webkit-filter: brightness(0) invert(100%);
 }
 
 @media (min-width: $breakpoint-mobile) {

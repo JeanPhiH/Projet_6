@@ -8,7 +8,7 @@ export default function APropos () {
 	return (
 		<>
 			<div className="banner2">
-				<div>coucou</div>
+				<div></div>
 			</div>
 			<div className="apropos">
 				<Collapse titleCollapse="Fiabilité" descriptionCollapse={textFiabilite} />

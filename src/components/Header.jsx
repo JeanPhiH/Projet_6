@@ -4,7 +4,9 @@ import Menu from "./Menu";
 export default function Header () {
 	return (
 		<header className="header">
-			<Logo />
+			<h1 className="logo">
+				<Logo />
+			</h1>
 			<Menu />
 		</header>
 	);
