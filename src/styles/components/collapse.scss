@@ -1,6 +1,8 @@
 .collapse {
 	position: relative;
 	overflow: hidden;
+	background-color: rgba(246, 246, 246, 0.45);
+	border-radius: 5px;
 
 	.arrow-up {
 		cursor: pointer;
@@ -71,6 +73,7 @@
 @media (min-width: $breakpoint-mobile) {
 	.collapse {
 		width: 100%;
+		border-radius: 10px;
 
 		.arrow-up {
 			height: 24px;
@@ -87,5 +90,6 @@
 
 	.description-collapse {
 		font-size: 18px;
+		
 	}
 }
