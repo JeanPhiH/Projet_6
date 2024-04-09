@@ -9,12 +9,12 @@ export default function Collapse ({titleCollapse, descriptionCollapse, equipemen
 			<h3 className="title-collapse" >{titleCollapse}</h3>
 			{isOpen ? 
 				<>
-					<img onClick={toggleCollapse} className="arrow-down"src="../src/assets/arrow-right.png" />
+					<img onClick={toggleCollapse} className="arrow-down"src="/assets/arrow-right.png" />
 					<div className="description-container">
 						<p className="description-collapse" >{descriptionCollapse ? descriptionCollapse : equipementsCollapse}</p>
 					</div>
 				</>
-			: <img onClick={toggleCollapse} className="arrow-up" src="../src/assets/arrow-right.png" />}
+			: <img onClick={toggleCollapse} className="arrow-up" src="/assets/arrow-right.png" />}
 		</div>
 	);
 }

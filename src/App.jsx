@@ -10,7 +10,7 @@ import { useState, useEffect } from "react";
 export default function App() {
 	const [listLogements, setListLogements] = useState([])
 	useEffect(() => {
-		fetch("./json/logements.json")
+		fetch("/assets/logements.json")
 		.then((response) => response.json())
 		.then((jsonData) => {
 			setListLogements(jsonData);

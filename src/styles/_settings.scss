@@ -1,10 +1,10 @@
 $color-primary: #FF6060;
 $color-secondary: #e3e3e3;
 $breakpoint-mobile: 650px;
-$banner-url-mobile: "/src/assets/image_source_1_512.webp";
-$banner-url-desktop: "/src/assets/image_source_1_1240.webp";
-$banner2-url-mobile: "/src/assets/image_source_2_512.webp";
-$banner2-url-desktop: "/src/assets/image_source_2_1240.webp";
+$banner-url-mobile: "/assets/image_source_1_512.webp";
+$banner-url-desktop: "/assets/image_source_1_1240.webp";
+$banner2-url-mobile: "/assets/image_source_2_512.webp";
+$banner2-url-desktop: "/assets/image_source_2_1240.webp";
 
 @mixin flex-center {
 	display: flex;
