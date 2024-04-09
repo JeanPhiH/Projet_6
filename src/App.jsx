@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 import { useState, useEffect } from "react";
 
 export default function App() {
-	const [listLogements, setListLogements] = useState([])
+	const [listLogements, setListLogements] = useState([]);
 	useEffect(() => {
 		fetch("/assets/logements.json")
 		.then((response) => response.json())
@@ -22,7 +22,7 @@ export default function App() {
 			<Header />
 			<main>
 				<Routes>
-					<Route path="/" element={<Home listLogements={listLogements}/>} />
+					<Route path="/" element={<Home listLogements={listLogements} />} />
 					<Route path="/fiche-logement/:id" element={<FicheLogement listLogements={listLogements}/>} />
 					<Route path="/a-propos" element={<APropos />} />
 					<Route path="*" element={<Error404 />} />
