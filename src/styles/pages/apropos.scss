@@ -22,9 +22,9 @@
 @media (min-width: $breakpoint-mobile) {
 	.apropos {
 		gap: 30px;
-
-		.banner2 {
-		background-image: url($banner2-url-desktop);
-		}
+	}
+	
+	.banner2 {
+	background-image: url($banner2-url-desktop);
 	}
 }
