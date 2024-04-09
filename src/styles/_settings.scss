@@ -12,6 +12,11 @@ $banner2-url-desktop: "/src/assets/image_source_2_1240.webp";
 	align-items: center;
 }
 
+@mixin hw100 {
+	height: 100%;
+	width: 100%;
+}
+
 @mixin arrow-right {
 	clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 67% 100%, 92% 50%, 67% 0);
 	background-color: white;

@@ -1,18 +1,16 @@
 
 .logo {
 	height: 46.72px;
+	width: 145px;
 
 	img {
-		width: 145px;
+		@include hw100;
 	}
 }
 
 @media (min-width: $breakpoint-mobile) {
 	.logo {
 		height: 68px;
-		
-		img {
-			width: 210px;
-		}
+		width: 210px;
 	}
 }
