@@ -4,11 +4,11 @@ export default function Rating({ratingId}) {
 	const starCount = [1, 2, 3, 4, 5];
 	return (
 		<div className="rating">
-			{starCount.map((star, index) => (
+			{starCount.map((star) => (
 				ratingId >= star ? (
-					<p className="star-filled" key={`${star}-${index}`}>{star}</p>
+					<div className="star-filled" key={star}></div>
 					) : (
-					<p className="star-empty" key={`${star}-${index+1000}`}></p>
+					<div className="star-empty" key={star}></div>
 				)
 			))}
 		</div>

@@ -6,19 +6,17 @@ import Error404 from "../pages/Error404";
 
 export default function FicheLogement ({listLogements}) {
 	const logId = useParams();
-	const isLogement = listLogements.find(log => log.id === logId.id);
+	const idLogement = listLogements.find(log => log.id === logId.id);
 	return (
 		<>
-			{!isLogement ? <Error404 /> : (
-			listLogements.map((logement, index) => (
-				(logement.id === logId.id) ? (
-					<>
-						<Carousel key={`${logement.title}-${index}`} idLog={logement.id} titleId={logement.title} picturesId={logement.pictures}/>
-						<Details key={`${logement.location}-${index}`} titleId={logement.title} locationId={logement.location} descriptionId={logement.description} hostId={logement.host} ratingId={logement.rating} equipmentsId={logement.equipments} tagsId={logement.tags}/>
-					</>
-					) : undefined
-				))
-			)}
+			{!idLogement ? <Error404 /> : (
+				<>
+					<Carousel key={idLogement.title} idLog={idLogement.id} titleId={idLogement.title} picturesId={idLogement.pictures}/>
+					<Details key={idLogement.location} titleId={idLogement.title} locationId={idLogement.location} descriptionId={idLogement.description} hostId={idLogement.host} ratingId={idLogement.rating} equipmentsId={idLogement.equipments} tagsId={idLogement.tags}/>
+				</>
+				)
+			}
+			
 		</>
 	);
 }
