@@ -22,9 +22,10 @@ export default function Carousel({idLog, titleId, picturesId}) {
 			</div>
 			: undefined
 			}
-			<div className="slide">
+			<div className="slide"
+				style={{ transform: `translateX(-${slide * 100}%)` }}>
 				{picturesId.map((picture, index) => (
-					<img className={slide === index ? undefined : "slide-hidden"} key={`${idLog}-${index}`} src={picture} alt={titleId} />
+					<img key={`${idLog}-${index}`} src={picture} alt={titleId} />
 				))}
 			</div>
 		</div>
