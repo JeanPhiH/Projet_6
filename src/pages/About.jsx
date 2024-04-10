@@ -1,7 +1,7 @@
 import Collapse from "../components/Collapse";
 import Banner from "../components/Banner";
 
-export default function APropos () {
+export default function About () {
 	const bannerTitle = "";
 	const bgbanner = {backgroundColor: "rgba(0, 0, 0, 0.3)"};
 	const bgurl= "/assets/image_source_2_1240.webp";

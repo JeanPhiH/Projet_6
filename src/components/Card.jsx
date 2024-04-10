@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function Card ({cover, title, idlog}) {
 	return (
-		<NavLink className="card-container" to={`/fiche-logement/${idlog}`}>
+		<NavLink className="card-container" to={`/housingcard/${idlog}`}>
 			<figure className="card">
 				<img src={cover} alt={title} />
 				<figcaption>{title}</figcaption>

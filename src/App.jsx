@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import FicheLogement from "./pages/FicheLogement";
-import APropos from "./pages/APropos";
+import HousingCard from "./pages/HousingCard";
+import About from "./pages/About";
 import Error404 from "./pages/Error404";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -23,8 +23,8 @@ export default function App() {
 			<main>
 				<Routes>
 					<Route path="/" element={<Home listLogements={listLogements} />} />
-					<Route path="/fiche-logement/:id" element={<FicheLogement listLogements={listLogements}/>} />
-					<Route path="/a-propos" element={<APropos />} />
+					<Route path="/housingcard/:id" element={<HousingCard listLogements={listLogements}/>} />
+					<Route path="/about" element={<About />} />
 					<Route path="*" element={<Error404 />} />
 					<Route path="/error404" element={<Error404 />} />
 				</Routes>

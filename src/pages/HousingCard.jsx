@@ -2,9 +2,9 @@ import { useParams } from "react-router-dom";
 import Carousel from "../components/Carousel";
 import Details from "../components/Details";
 import PropTypes from 'prop-types';
-import Error404 from "../pages/Error404";
+import Error404 from "./Error404";
 
-export default function FicheLogement ({listLogements}) {
+export default function HousingCard ({listLogements}) {
 	const logId = useParams();
 	const idLogement = listLogements.find(log => log.id === logId.id);
 	return (
@@ -16,11 +16,10 @@ export default function FicheLogement ({listLogements}) {
 				</>
 				)
 			}
-			
 		</>
 	);
 }
 
-FicheLogement.propTypes = {
+HousingCard.propTypes = {
 	listLogements: PropTypes.array
 }
