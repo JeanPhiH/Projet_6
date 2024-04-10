@@ -4,7 +4,7 @@ export default function Tags({tagsId}) {
 	return (
 		<div className="tags">
 			{tagsId.map((tag, index) => (
-				<p className="tag"key={index}>{tag}</p>
+				<p className="tag"key={`${tag}-${index}`}>{tag}</p>
 			))}
 		</div>
 	)

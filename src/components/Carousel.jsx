@@ -25,7 +25,9 @@ export default function Carousel({idLog, titleId, picturesId}) {
 			<div className="slide"
 				style={{ transform: `translateX(-${slide * 100}%)` }}>
 				{picturesId.map((picture, index) => (
-					<img key={`${idLog}-${index}`} src={picture} alt={titleId} />
+					<div key={`${idLog}-${index}`} className="img-container">
+						<img src={picture} alt={titleId} />
+					</div>
 				))}
 			</div>
 		</div>

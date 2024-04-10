@@ -9,14 +9,19 @@
 		display: flex;
 		@include hw100;
 		transition: ease-out 0.3s;
+
+		.img-container {
+			@include hw100;
+			min-width: 100%;
+			
+			img {
+				@include hw100;
+				object-fit: cover;
+			}
+		}
 		
 	}
 	
-	img {
-		@include hw100;
-		min-width: 100%;
-		object-fit: cover;
-	}
 }
 
 .prev, .next {

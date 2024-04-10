@@ -10,16 +10,15 @@ export default function FicheLogement ({listLogements}) {
 	return (
 		<>
 			{!isLogement ? <Error404 /> : (
-			listLogements.map((logement) => {
-				if (logement.id === logId.id) {
-					return (
-						<>
-							<Carousel key={logement.title} idLog={logement.id} titleId={logement.title} picturesId={logement.pictures}/>
-							<Details key={logement.location} titleId={logement.title} locationId={logement.location} descriptionId={logement.description} hostId={logement.host} ratingId={logement.rating} equipmentsId={logement.equipments} tagsId={logement.tags}/>
-						</>
-					)
-				}
-			}))}
+			listLogements.map((logement, index) => (
+				(logement.id === logId.id) ? (
+					<>
+						<Carousel key={`${logement.title}-${index}`} idLog={logement.id} titleId={logement.title} picturesId={logement.pictures}/>
+						<Details key={`${logement.location}-${index}`} titleId={logement.title} locationId={logement.location} descriptionId={logement.description} hostId={logement.host} ratingId={logement.rating} equipmentsId={logement.equipments} tagsId={logement.tags}/>
+					</>
+					) : undefined
+				))
+			)}
 		</>
 	);
 }
