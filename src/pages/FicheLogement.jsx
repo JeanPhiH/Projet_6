@@ -3,11 +3,8 @@ import Carousel from "../components/Carousel";
 import Details from "../components/Details";
 import PropTypes from 'prop-types';
 import Error404 from "../pages/Error404";
-// import { Link } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
 
 export default function FicheLogement ({listLogements}) {
-	// const navigate = useNavigate();
 	const logId = useParams();
 	const isLogement = listLogements.find(log => log.id === logId.id);
 	return (

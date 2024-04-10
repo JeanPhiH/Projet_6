@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import Rating from "./Rating";
 import Collapse from "./Collapse";
+import Tags from "./Tags";
 
 export default function Details({titleId, locationId, descriptionId, hostId, ratingId, equipmentsId, tagsId}) {
 	const firstName = hostId.name.split(" ")[0];
@@ -11,11 +12,7 @@ export default function Details({titleId, locationId, descriptionId, hostId, rat
 				<div className="details-title">
 					<h2 className="title">{titleId}</h2>
 					<p className="location">{locationId}</p>
-					<div className="tags">
-						{tagsId.map((tag, index) => (
-							<p className="tag"key={index}>{tag}</p>
-							))}
-					</div>
+					<Tags tagsId={tagsId} />
 				</div>
 				<div className="details-host">
 					<div className="host">

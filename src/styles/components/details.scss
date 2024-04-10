@@ -19,28 +19,6 @@
 	}
 }
 
-.tags {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	gap: 10px;
-	margin-top: 10px;
-	height: 18px;
-
-	.tag {
-		@include flex-center;
-		height: 100%;
-		font-size: 10px;
-		font-weight: bold;
-		background-color: $color-primary;
-		color: white;
-		border-radius: 5px;
-		padding: 0 10px;
-		min-width: 84px;
-	}
-}
-	
-
 .details-host {
 	display: flex;
 	flex-direction: row-reverse;
@@ -76,8 +54,6 @@
 	gap: 20px;
 }
 
-
-
 @media (min-width: $breakpoint-mobile) {
 	.details-container {
 		flex-direction: row;
@@ -94,17 +70,6 @@
 			.location {
 				font-size: 18px;
 			}
-		}
-	}
-
-	.tags {
-		margin-top: 18px;
-		height: 26px;
-		gap: 10px;
-
-		.tag {
-			font-size: 14px;
-			min-width: 115px;
 		}
 	}
 
