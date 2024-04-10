@@ -3,6 +3,8 @@ import Rating from "./Rating";
 import Collapse from "./Collapse";
 
 export default function Details({titleId, locationId, descriptionId, hostId, ratingId, equipmentsId, tagsId}) {
+	const firstName = hostId.name.split(" ")[0];
+	const lastName = hostId.name.split(" ")[1];
 	return (
 		<>
 			<div className="details-container">
@@ -17,7 +19,10 @@ export default function Details({titleId, locationId, descriptionId, hostId, rat
 				</div>
 				<div className="details-host">
 					<div className="host">
-						<p className="host-name">{hostId.name}</p>
+						<div className="host-name">
+							<p>{firstName}</p>
+							<p>{lastName}</p>
+						</div>
 						<img className="host-picture"src={hostId.picture} alt={hostId.name} />
 					</div>
 					<Rating ratingId={ratingId} />

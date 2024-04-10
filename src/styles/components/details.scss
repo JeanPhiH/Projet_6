@@ -54,8 +54,9 @@
 		gap: 10px;
 
 		.host-name {
+			display: flex;
+			flex-direction: column;
 			font-size: 12px;
-			width: 60px;
 			text-align: right;
 			color: $color-primary;
 		}
