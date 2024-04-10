@@ -20,7 +20,7 @@
 			align-items: flex-end;
 			@include hw100;
 			bottom: 0px;
-			padding: 0 19px 15px 19px;
+			padding: 0 35% 15px 19px;
 			font-size: 18px;
 			font-weight: bold;
 			color: white;
@@ -33,6 +33,6 @@
 	.card-container {
 		width: 340px;
 		height: 340px;
-
+		margin: 0;
 	}
 }
