@@ -8,12 +8,10 @@ export default function Home ({listLogements}) {
 	const bgurl = "/assets/image_source_1_1240.webp";
 	
 	return (
-		
 		<>
 			<Banner bannerTitle={bannerTitle} bgbanner={bgbanner} bgurl={bgurl}/>
 			<Gallery listLogements={listLogements}/>
 		</>
-		
 	);
 }
 

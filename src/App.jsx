@@ -26,7 +26,6 @@ export default function App() {
 					<Route path="/housingcard/:id" element={<HousingCard listLogements={listLogements}/>} />
 					<Route path="/about" element={<About />} />
 					<Route path="*" element={<Error404 />} />
-					<Route path="/error404" element={<Error404 />} />
 				</Routes>
 			</main>
 			<Footer />
