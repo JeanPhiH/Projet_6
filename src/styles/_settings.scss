@@ -1,3 +1,5 @@
+// VARIABLES
+
 $color-primary: #FF6060;
 $color-secondary: #F6F6F6;
 $color-tertiary: #e3e3e3;
@@ -6,6 +8,8 @@ $banner-url-mobile: "/assets/image_source_1_512.webp";
 $banner-url-desktop: "/assets/image_source_1_1240.webp";
 $banner2-url-mobile: "/assets/image_source_2_512.webp";
 $banner2-url-desktop: "/assets/image_source_2_1240.webp";
+
+// MIXINS
 
 @mixin flex-center {
 	display: flex;
@@ -32,6 +36,8 @@ $banner2-url-desktop: "/assets/image_source_2_1240.webp";
 	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 	background-color: $color-tertiary;
 }
+
+// GLOBAL CSS
 
 * {
   padding: 0;

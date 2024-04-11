@@ -6,8 +6,8 @@
 	overflow: hidden;
 	
 	.card {
-		position: relative;
 		@include hw100;
+		position: relative;
 		
 		img {
 			@include hw100;
@@ -15,10 +15,10 @@
 		}
 		
 		figcaption {
+			@include hw100;
 			position: absolute;
 			display: flex;
 			align-items: flex-end;
-			@include hw100;
 			bottom: 0px;
 			padding: 0 35% 15px 19px;
 			font-size: 18px;
@@ -28,6 +28,7 @@
 		}
 	}
 }
+
 
 @media (min-width: $breakpoint-mobile) {
 	.card-container {

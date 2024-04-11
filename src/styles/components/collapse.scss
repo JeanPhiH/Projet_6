@@ -11,6 +11,8 @@
 		top: 5px;
 		right: 15px;
 		transform: rotate(270deg);
+
+		// rotation when closing a collapse
 		animation: uparrowtation 0.3s ease-out;
 		@keyframes uparrowtation {
 			0% {
@@ -25,6 +27,8 @@
 	.arrow-down {
 		@extend .arrow-up;
 		transform: rotate(90deg);
+
+		// rotation when opening a collapse
 		animation: downarrowtation 0.3s ease-out;
 		@keyframes downarrowtation {
 			0% {
@@ -36,6 +40,7 @@
 		}
 	}
 }
+
 .title-collapse {
 	background-color: $color-primary;
 	color: white;
@@ -47,27 +52,30 @@
 	display: flex;
 	align-items: center;
 }
+
 .description-container {
 	overflow: hidden;
-	animation: heighty 0.6s linear;
 	height: fit-content;
+
+	// div container will appear when opening a collapse
+	animation: heighty 0.6s linear;
 	@keyframes heighty {
 		0% {
 			max-height: 0px;
-		}
-		50% {
-			max-height: 100px;
 		}
 		100% {
 			max-height: 200px;
 		}
 	}
 }
+
 .description-collapse {
 	margin: 13px 20px 20px 20px;
 	font-size: 12px;
 	font-weight: 400;
 	position: relative;
+
+	// text description will appear when opening a collapse
 	animation: reveal 0.3s linear;
 	@keyframes reveal {
 		0% {
@@ -78,10 +86,12 @@
 		}
 	}
 
+	// for equipements
 	li {
 		font-weight: 400;
 	}
 }
+
 
 @media (min-width: $breakpoint-mobile) {
 	.collapse {
@@ -104,6 +114,5 @@
 
 	.description-collapse {
 		font-size: 18px;
-		
 	}
 }

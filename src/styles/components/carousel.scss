@@ -19,9 +19,7 @@
 				object-fit: cover;
 			}
 		}
-		
 	}
-	
 }
 
 .prev, .next {
@@ -55,6 +53,7 @@
 	color: white;
 	z-index: 100;
 }
+
 
 @media (min-width: $breakpoint-mobile) {
 	.carousel {

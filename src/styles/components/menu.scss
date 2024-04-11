@@ -8,24 +8,18 @@
 		align-items: center;
 		gap: 26px;
 		list-style-type: none;
-		
-		li {
 
-			a {
+		li	a {
 				text-decoration: none;
 				color: black;
-				// &:hover {
-				// 	text-decoration: underline;
-				// }
 
 				&.activelink {
 					text-decoration: underline;
 				}
 			}
-		}
-
 	}
 }
+
 
 @media (min-width: $breakpoint-mobile) {
 	.menu {
