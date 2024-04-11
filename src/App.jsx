@@ -8,12 +8,12 @@ import Footer from "./components/Footer";
 import { useState, useEffect } from "react";
 
 export default function App() {
-	const [listLogements, setListLogements] = useState([]);
+	const [listHousings, setListHousings] = useState([]);
 	useEffect(() => {
 		fetch("/assets/logements.json")
 		.then((response) => response.json())
 		.then((jsonData) => {
-			setListLogements(jsonData);
+			setListHousings(jsonData);
 		})
 	}, []);
 
@@ -22,8 +22,8 @@ export default function App() {
 			<Header />
 			<main>
 				<Routes>
-					<Route path="/" element={<Home listLogements={listLogements} />} />
-					<Route path="/housingcard/:id" element={<HousingCard listLogements={listLogements}/>} />
+					<Route path="/" element={<Home listHousings={listHousings} />} />
+					<Route path="/housingcard/:id" element={<HousingCard listHousings={listHousings}/>} />
 					<Route path="/about" element={<About />} />
 					<Route path="*" element={<Error404 />} />
 				</Routes>

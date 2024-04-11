@@ -1,17 +1,17 @@
 import Card from "./Card";
 import PropTypes from 'prop-types';
 
-export default function Gallery ({listLogements}) {
+export default function Gallery ({listHousings}) {
 	
 	return (
 		<div className="gallery">
-			{listLogements.map((logement) => (
-				<Card key={logement.id} cover={logement.cover} title={logement.title} idlog={logement.id} />
+			{listHousings.map((housing) => (
+				<Card key={housing.id} cover={housing.cover} title={housing.title} idlog={housing.id} />
 			))}
 		</div>
 	);
 }
 
 Gallery.propTypes = {
-	listLogements: PropTypes.array
+	listHousings: PropTypes.array
 }

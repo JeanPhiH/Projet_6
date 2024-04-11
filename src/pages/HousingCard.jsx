@@ -4,15 +4,16 @@ import Details from "../components/Details";
 import PropTypes from 'prop-types';
 import Error404 from "./Error404";
 
-export default function HousingCard ({listLogements}) {
-	const logId = useParams();
-	const idLogement = listLogements.find(log => log.id === logId.id);
+export default function HousingCard ({listHousings}) {
+	const urlId = useParams();
+	const idHousing = listHousings.find(housing => housing.id === urlId.id);
 	return (
 		<>
-			{!idLogement ? <Error404 /> : (
+			{!idHousing ? <Error404 /> : (
 				<>
-					<Carousel key={idLogement.title} idLog={idLogement.id} titleId={idLogement.title} picturesId={idLogement.pictures}/>
-					<Details key={idLogement.location} titleId={idLogement.title} locationId={idLogement.location} descriptionId={idLogement.description} hostId={idLogement.host} ratingId={idLogement.rating} equipmentsId={idLogement.equipments} tagsId={idLogement.tags}/>
+					<Carousel key={idHousing.title} idLog={idHousing.id} titleId={idHousing.title} picturesId={idHousing.pictures}/>
+
+					<Details key={idHousing.location} titleId={idHousing.title} locationId={idHousing.location} descriptionId={idHousing.description} hostId={idHousing.host} ratingId={idHousing.rating} equipmentsId={idHousing.equipments} tagsId={idHousing.tags}/>
 				</>
 				)
 			}
@@ -21,5 +22,5 @@ export default function HousingCard ({listLogements}) {
 }
 
 HousingCard.propTypes = {
-	listLogements: PropTypes.array
+	listHousings: PropTypes.array
 }
