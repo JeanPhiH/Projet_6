@@ -5,16 +5,15 @@ import PropTypes from 'prop-types';
 import Error404 from "./Error404";
 import { useState, useEffect } from 'react';
 
-export default function HousingCard ({listHousings}) {
+export default function HousingCard ({listHousings, isLoading}) {
   const {id} = useParams();
-  const [isLoading, setIsLoading] = useState(true);
+  
   const [idHousing, setIdHousing] = useState(null);
-
   useEffect(() => {
     const foundHousing = listHousings.find(housing => housing.id === id);
     setIdHousing(foundHousing);
-    setIsLoading(false);
   }, [listHousings, id]);
+	console.log(isLoading);
 
   return (
     <>
@@ -32,5 +31,7 @@ export default function HousingCard ({listHousings}) {
 }
 
 HousingCard.propTypes = {
-	listHousings: PropTypes.array
+	listHousings: PropTypes.array,
+	isLoading: PropTypes.bool,
+	setIsLoading: PropTypes.func
 }

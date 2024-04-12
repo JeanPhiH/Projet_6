@@ -9,11 +9,13 @@ import { useState, useEffect } from "react";
 
 export default function App() {
 	const [listHousings, setListHousings] = useState([]);
+	const [isLoading, setIsLoading] = useState(true);
 	useEffect(() => {
 		fetch("/assets/logements.json")
 		.then((response) => response.json())
 		.then((jsonData) => {
 			setListHousings(jsonData);
+			setIsLoading(false);
 		})
 	}, []);
 
@@ -23,7 +25,7 @@ export default function App() {
 			<main>
 				<Routes>
 					<Route path="/" element={<Home listHousings={listHousings} />} />
-					<Route path="/housingcard/:id" element={<HousingCard listHousings={listHousings}/>} />
+					<Route path="/housingcard/:id" element={<HousingCard listHousings={listHousings} isLoading={isLoading}/>} />
 					<Route path="/about" element={<About />} />
 					<Route path="*" element={<Error404 />} />
 				</Routes>
