@@ -20,9 +20,9 @@ export default function HousingCard ({listHousings, isLoading}) {
       {isLoading ? <p>Loading...</p> : (
         !idHousing ? <Error404 /> : (
           <>
-            <Carousel key={idHousing.title} idLog={idHousing.id} titleId={idHousing.title} picturesId={idHousing.pictures}/>
+            <Carousel key={idHousing.title} idHousing={idHousing}/>
 
-            <Details key={idHousing.location} titleId={idHousing.title} locationId={idHousing.location} descriptionId={idHousing.description} hostId={idHousing.host} ratingId={idHousing.rating} equipmentsId={idHousing.equipments} tagsId={idHousing.tags}/>
+						<Details key={idHousing.location} idHousing={idHousing}/>
           </>
         )
       )}
