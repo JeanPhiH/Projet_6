@@ -1,14 +1,14 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 export default function Card ({cover, title, idlog}) {
 	return (
-		<NavLink className="card-container" to={`/housingcard/${idlog}`}>
+		<Link className="card-container" to={`/housingcard/${idlog}`}>
 			<figure className="card">
 				<img src={cover} alt={title} />
 				<figcaption>{title}</figcaption>
 			</figure>
-		</NavLink>
+		</Link>
 	);
 }
 

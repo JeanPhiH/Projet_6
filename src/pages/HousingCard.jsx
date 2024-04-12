@@ -7,8 +7,6 @@ import Error404 from "./Error404";
 export default function HousingCard ({listHousings, isLoading}) {
   const {id} = useParams();
 	const idHousing = listHousings.find(housing => housing.id === id);
-	console.log(idHousing);
-	console.log(id);
 	
   return (
 		<>
@@ -28,6 +26,5 @@ export default function HousingCard ({listHousings, isLoading}) {
 
 HousingCard.propTypes = {
 	listHousings: PropTypes.array,
-	isLoading: PropTypes.bool,
-	setIsLoading: PropTypes.func
+	isLoading: PropTypes.bool
 }
