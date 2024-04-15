@@ -4,9 +4,7 @@ $color-primary: #FF6060;
 $color-secondary: #F6F6F6;
 $color-tertiary: #e3e3e3;
 $breakpoint-mobile: 650px;
-$banner-url-mobile: "/assets/image_source_1_512.webp";
 $banner-url-desktop: "/assets/image_source_1_1240.webp";
-$banner2-url-mobile: "/assets/image_source_2_512.webp";
 $banner2-url-desktop: "/assets/image_source_2_1240.webp";
 
 // MIXINS
@@ -22,11 +20,6 @@ $banner2-url-desktop: "/assets/image_source_2_1240.webp";
 	width: 100%;
 }
 
-@mixin arrow-right {
-	clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 67% 100%, 92% 50%, 67% 0);
-	background-color: white;
-}
-
 @mixin star-filled {
 	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 	background-color: $color-primary;
@@ -36,6 +29,11 @@ $banner2-url-desktop: "/assets/image_source_2_1240.webp";
 	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 	background-color: $color-tertiary;
 }
+
+// @mixin arrow-right {
+// 	clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 67% 100%, 92% 50%, 67% 0);
+// 	background-color: white;
+// }
 
 // GLOBAL CSS
 
@@ -48,7 +46,6 @@ $banner2-url-desktop: "/assets/image_source_2_1240.webp";
 
 body {
 	font-family: 'Montserrat', sans-serif;
-	
 }
 
 header, main {
@@ -57,10 +54,10 @@ header, main {
 	margin: 0 auto;
 }
 
+// main {
+// 	min-height: 66vh;
+// }
+
 li {
 	list-style: none;
-}
-
-@media (min-width: $breakpoint-mobile) {
-
 }
